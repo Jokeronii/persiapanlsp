@@ -50,7 +50,7 @@ y = df_clean['target']
 
 smote = SMOTE(random_state=42)
 X, y = smote.fit_resample(X, y)
-
+#load model disini
 model = pickle.load(open("C:\\bengkod\\heart disease final\heart-disease-hungarian-main\\model\\rf_normal_model.pkl", 'rb'))
 
 y_pred = model.predict(X)
@@ -72,7 +72,7 @@ st.title("Cleveland Heart Disease")
 st.write("")
 
 tab1, tab2 = st.tabs(["Single-predict", "Multi-predict"])
-
+#ubah sesuai jumlah fitur
 age = 0
 sex = 0
 cp = 0
